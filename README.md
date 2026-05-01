@@ -1,4 +1,4 @@
-# MIOTY Blueprint Registry
+# MIOTY Central Blueprint Registry
 
 Community-contributed MIOTY device blueprints (payload decoders) for use with [KiloCenter](https://github.com/Kiloiot/KiloServiceCenter).
 
