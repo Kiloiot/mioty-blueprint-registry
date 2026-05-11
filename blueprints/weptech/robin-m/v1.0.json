@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-05-11T17:34:21.495407Z",
+  "device_model_code": "robin-m",
+  "device_model_id": "b8a20359-8263-4ae1-a357-39428c3832be",
+  "device_model_name": "Robin-M",
+  "id": "7bb9bccb-21f4-4b74-b068-047acee0bfe5",
+  "is_default": true,
+  "manufacturer_name": "WepTech",
+  "spec": {
+    "meta": {
+      "name": "ROBIN-M Unidirectional",
+      "vendor": "Weptech"
+    },
+    "uplink": [
+      {
+        "id": 0,
+        "crypto": 0,
+        "payload": [
+          {
+            "name": "temperature",
+            "component": "16bitTemperature"
+          },
+          {
+            "name": "humidity",
+            "component": "16bitHumidity"
+          }
+        ]
+      }
+    ],
+    "typeEui": "70B3D59CD0000094",
+    "version": "1.0",
+    "component": {
+      "16bitHumidity": {
+        "func": "$/10",
+        "size": 16,
+        "type": "int",
+        "unit": "%",
+        "littleEndian": false
+      },
+      "16bitTemperature": {
+        "func": "$/10",
+        "size": 16,
+        "type": "int",
+        "unit": "°C",
+        "littleEndian": false
+      }
+    }
+  },
+  "type_eui": "70B3D59CD0000094",
+  "updated_at": "2026-05-11T17:34:21.495407Z",
+  "version": "1.0"
+}
