@@ -1,0 +1,197 @@
+{
+  "created_at": "2026-08-27T00:00:00Z",
+  "device_model_code": "nyx",
+  "device_model_id": "989e1a1e-27ba-5344-b677-76e68544c9f3",
+  "device_model_name": "Nyx",
+  "id": "613dbcc9-654e-5eaa-8017-3ca8a4bea14e",
+  "is_default": true,
+  "manufacturer_name": "Sentinum",
+  "spec": {
+    "component": {
+      "base_id": {
+        "func": "",
+        "size": 4,
+        "type": "uint",
+        "unit": ""
+      },
+      "major_version": {
+        "func": "",
+        "size": 4,
+        "type": "uint",
+        "unit": ""
+      },
+      "minor_version": {
+        "func": "",
+        "size": 4,
+        "type": "uint",
+        "unit": ""
+      },
+      "product_version": {
+        "func": "",
+        "size": 4,
+        "type": "uint",
+        "unit": ""
+      },
+      "uplink_counter": {
+        "func": "",
+        "littleEndian": false,
+        "size": 8,
+        "type": "uint",
+        "unit": ""
+      },
+      "battery_voltage": {
+        "func": "$/1000",
+        "littleEndian": false,
+        "size": 16,
+        "type": "uint",
+        "unit": "V"
+      },
+      "internal_temperature": {
+        "func": "($ / 10) - 100",
+        "littleEndian": false,
+        "size": 16,
+        "type": "int",
+        "unit": "°C"
+      },
+      "humidity": {
+        "func": "",
+        "littleEndian": false,
+        "size": 8,
+        "type": "uint",
+        "unit": "%"
+      },
+      "dew_point": {
+        "func": "$ / 10 - 100",
+        "littleEndian": false,
+        "size": 16,
+        "type": "int",
+        "unit": "°C"
+      },
+      "alarm_level": {
+        "func": "",
+        "littleEndian": false,
+        "size": 8,
+        "type": "uint",
+        "unit": ""
+      },
+      "raw_lux": {
+        "func": "(1 \u003c\u003c ($ \u003e\u003e 12)) * ($ \u0026 0x0FFF) * 0.01",
+        "littleEndian": false,
+        "size": 16,
+        "type": "uint",
+        "unit": "lx"
+      },
+      "bme_status": {
+        "func": "",
+        "littleEndian": false,
+        "size": 8,
+        "type": "int",
+        "unit": ""
+      },
+      "pressure": {
+        "func": "",
+        "littleEndian": false,
+        "size": 16,
+        "type": "uint",
+        "unit": "Pa"
+      },
+      "iaq_status": {
+        "func": "",
+        "littleEndian": false,
+        "size": 8,
+        "type": "int",
+        "unit": ""
+      },
+      "iaq_index": {
+        "func": "",
+        "littleEndian": false,
+        "size": 16,
+        "type": "int",
+        "unit": ""
+      }
+    },
+    "meta": {
+      "firmwareVersion": "1.0",
+      "hardwareVersion": "1.0",
+      "name": "Nyx",
+      "vendor": "Sentinum"
+    },
+    "typeEui": "fca84a0700000000",
+    "uplink": [
+      {
+        "id": 0,
+        "payload": [
+          {
+            "component": "base_id",
+            "name": "base_id"
+          },
+          {
+            "component": "major_version",
+            "name": "major_version"
+          },
+          {
+            "component": "minor_version",
+            "name": "minor_version"
+          },
+          {
+            "component": "product_version",
+            "name": "product_version"
+          },
+          {
+            "component": "uplink_counter",
+            "name": "uplink_counter"
+          },
+          {
+            "component": "battery_voltage",
+            "name": "battery_voltage"
+          },
+          {
+            "component": "internal_temperature",
+            "name": "internal_temperature"
+          },
+          {
+            "component": "humidity",
+            "name": "humidity"
+          },
+          {
+            "component": "dew_point",
+            "name": "dew_point"
+          },
+          {
+            "component": "alarm_level",
+            "name": "alarm_level"
+          },
+          {
+            "component": "raw_lux",
+            "condition": "($product_version \u0026 0x01)==0x01",
+            "name": "raw_lux"
+          },
+          {
+            "component": "bme_status",
+            "condition": "($product_version \u0026 0x04)==0x04",
+            "name": "bme_status"
+          },
+          {
+            "component": "pressure",
+            "condition": "($product_version \u0026 0x04)==0x04",
+            "name": "pressure"
+          },
+          {
+            "component": "iaq_status",
+            "condition": "($product_version \u0026 0x06) == 0x06",
+            "name": "iaq_status"
+          },
+          {
+            "component": "iaq_index",
+            "condition": "($product_version \u0026 0x06) == 0x06",
+            "name": "iaq_index"
+          }
+        ]
+      }
+    ],
+    "version": "1.0"
+  },
+  "type_eui": "FCA84A0700000000",
+  "updated_at": "2026-08-27T00:00:00Z",
+  "version": "1.0"
+}

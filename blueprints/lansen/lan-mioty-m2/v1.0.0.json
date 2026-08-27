@@ -1,0 +1,157 @@
+{
+  "created_at": "2026-08-27T00:00:00Z",
+  "device_model_code": "lan-mioty-m2",
+  "device_model_id": "6447c956-7c88-508e-9f28-a4a142ba6d50",
+  "device_model_name": "LAN-MIOTY-M2",
+  "id": "9614b10f-037e-577e-9ec7-2acb0defeadc",
+  "is_default": true,
+  "manufacturer_name": "Lansen",
+  "spec": {
+    "version": "1.0.0",
+    "typeEui": "A0412D0920005601",
+    "meta": {
+      "name": "LAN-MIOTY-M2",
+      "article": "LAN-920-0056",
+      "vendor": "Lansen",
+      "hardwareVersion": "1.0",
+      "firmwareVersion": "1.0"
+    },
+    "uplink": [
+      {
+        "id": 0,
+        "payload": [
+          {
+            "name": "total_opening_internal_magnet",
+            "component": "total_nbr_of_openings_data"
+          },
+          {
+            "name": "internal_magnet_alarm",
+            "component": "bitData"
+          },
+          {
+            "name": "external_alarm",
+            "component": "bitData"
+          },
+          {
+            "name": "internal_magnet_alarm_last_5min",
+            "component": "bitData"
+          },
+          {
+            "name": "internal_magnet_alarm_last_10min",
+            "component": "bitData"
+          },
+          {
+            "name": "internal_magnet_alarm_last_1h",
+            "component": "bitData"
+          },
+          {
+            "name": "internal_magnet_alarm_last_24h",
+            "component": "bitData"
+          },
+          {
+            "name": "external_alarm_last_5min",
+            "component": "bitData"
+          },
+          {
+            "name": "external_alarm_last_10min",
+            "component": "bitData"
+          },
+          {
+            "name": "external_alarm_last_1h",
+            "component": "bitData"
+          },
+          {
+            "name": "external_alarm_last_24h",
+            "component": "bitData"
+          },
+          {
+            "name": "minutes_since_last_alarm",
+            "component": "minutes_since_last_alarm_data"
+          },
+          {
+            "name": "duration_last_alarm",
+            "component": "duration_last_alarm_data"
+          },
+          {
+            "name": "last_alarm_input",
+            "component": "bitData"
+          },
+          {
+            "name": "op_years",
+            "component": "years"
+          },
+          {
+            "name": "run_time",
+            "component": "years"
+          },
+          {
+            "name": "battery_voltage",
+            "component": "battery"
+          },
+          {
+            "name": "low_batt",
+            "component": "bitData"
+          },
+          {
+            "name": "sab_detected_internal",
+            "component": "bitData"
+          },
+          {
+            "name": "sab_detected_external",
+            "component": "bitData"
+          },
+          {
+            "name": "async_message",
+            "component": "bitData"
+          }
+        ]
+      }
+    ],
+    "component": {
+      "total_nbr_of_openings_data": {
+        "size": 20,
+        "type": "uint",
+        "func": "$",
+        "unit": "",
+        "littleEndian": false
+      },
+      "minutes_since_last_alarm_data": {
+        "size": 18,
+        "type": "uint",
+        "func": "$",
+        "unit": "minutes",
+        "littleEndian": false
+      },
+      "duration_last_alarm_data": {
+        "size": 13,
+        "type": "uint",
+        "func": "$",
+        "unit": "minutes",
+        "littleEndian": false
+      },
+      "battery": {
+        "size": 4,
+        "type": "uint",
+        "func": "($+18)/10",
+        "unit": "V",
+        "littleEndian": false
+      },
+      "years": {
+        "size": 5,
+        "type": "uint",
+        "func": "$",
+        "unit": "years",
+        "littleEndian": false
+      },
+      "bitData": {
+        "size": 1,
+        "type": "bool",
+        "unit": "",
+        "littleEndian": false
+      }
+    }
+  },
+  "type_eui": "A0412D0920005601",
+  "updated_at": "2026-08-27T00:00:00Z",
+  "version": "1.0.0"
+}

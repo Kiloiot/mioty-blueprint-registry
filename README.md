@@ -17,6 +17,8 @@ Each blueprint JSON file contains the decoder specification, device metadata, an
 
 Blueprints are submitted directly from KiloCenter's web interface. When you create a blueprint and click "Submit to Registry", a pull request is automatically created in this repository.
 
+Blueprints can also be added by hand, and manufacturers are welcome to publish and maintain their own device entries here. See [blueprints/README.md](blueprints/README.md) for the layout, the file format and what a new entry needs.
+
 ## Usage
 
 Import blueprints from this registry into your KiloCenter instance through the device catalog.
