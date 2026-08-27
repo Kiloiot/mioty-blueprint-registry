@@ -1,0 +1,135 @@
+{
+  "created_at": "2026-08-27T00:00:00Z",
+  "device_model_code": "lan-mioty-e2-co2-s",
+  "device_model_id": "49fc7e2d-d1e1-5957-801b-dece6ec40848",
+  "device_model_name": "LAN-MIOTY-E2-CO2-S",
+  "id": "0ecc284b-bc86-578d-becf-3363ed7fa832",
+  "is_default": true,
+  "manufacturer_name": "Lansen",
+  "spec": {
+    "version": "1.0.0",
+    "typeEui": "A0412D0920007201",
+    "meta": {
+      "name": "LAN-MIOTY-E2-CO2-S",
+      "article": "LAN-920-0072",
+      "vendor": "Lansen",
+      "hardwareVersion": "1.0",
+      "firmwareVersion": "1.0"
+    },
+    "uplink": [
+      {
+        "id": 0,
+        "payload": [
+          {
+            "name": "temp_1",
+            "component": "temperature"
+          },
+          {
+            "name": "humidity_1",
+            "component": "humidity"
+          },
+          {
+            "name": "co2_1",
+            "component": "co2"
+          },
+          {
+            "name": "sound_1",
+            "component": "sound"
+          },
+          {
+            "name": "temp_2",
+            "component": "temperature"
+          },
+          {
+            "name": "humidity_2",
+            "component": "humidity"
+          },
+          {
+            "name": "co2_2",
+            "component": "co2"
+          },
+          {
+            "name": "sound_2",
+            "component": "sound"
+          },
+          {
+            "name": "batt",
+            "component": "battery"
+          },
+          {
+            "name": "co2_last_calibration_value",
+            "component": "co2"
+          },
+          {
+            "name": "days_to_next_calibration",
+            "component": "days"
+          },
+          {
+            "name": "calibration_not_done",
+            "component": "bitData"
+          },
+          {
+            "name": "co2_error",
+            "component": "bitData"
+          },
+          {
+            "name": "debug_value",
+            "component": "bitData"
+          }
+        ]
+      }
+    ],
+    "component": {
+      "temperature": {
+        "size": 9,
+        "type": "uint",
+        "func": "$/8-10",
+        "unit": "°C",
+        "littleEndian": false
+      },
+      "humidity": {
+        "size": 7,
+        "type": "uint",
+        "func": "$",
+        "unit": "%",
+        "littleEndian": false
+      },
+      "co2": {
+        "size": 8,
+        "type": "uint",
+        "func": "$*20",
+        "unit": "ppm",
+        "littleEndian": false
+      },
+      "sound": {
+        "size": 6,
+        "type": "uint",
+        "func": "$+40",
+        "unit": "dBM",
+        "littleEndian": false
+      },
+      "battery": {
+        "size": 4,
+        "type": "uint",
+        "func": "($+18)/10",
+        "unit": "V",
+        "littleEndian": false
+      },
+      "days": {
+        "size": 5,
+        "type": "uint",
+        "unit": "days",
+        "littleEndian": false
+      },
+      "bitData": {
+        "size": 1,
+        "type": "bool",
+        "unit": "",
+        "littleEndian": false
+      }
+    }
+  },
+  "type_eui": "A0412D0920007201",
+  "updated_at": "2026-08-27T00:00:00Z",
+  "version": "1.0.0"
+}

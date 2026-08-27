@@ -1,0 +1,162 @@
+{
+  "created_at": "2026-08-27T00:00:00Z",
+  "device_model_code": "lan-mioty-g2-ldp",
+  "device_model_id": "c655ab1f-e164-51e1-a5da-33a91961692f",
+  "device_model_name": "LAN-MIOTY-G2-LDP",
+  "id": "a0f92bb4-f549-57eb-8a0b-628307d119ac",
+  "is_default": true,
+  "manufacturer_name": "Lansen",
+  "spec": {
+    "version": "1.0.0",
+    "typeEui": "A0412D0920006101",
+    "meta": {
+      "name": "LAN-MIOTY-G2-LDP",
+      "article": "LAN-920-0061",
+      "vendor": "Lansen",
+      "hardwareVersion": "1.0",
+      "firmwareVersion": "1.0"
+    },
+    "uplink": [
+      {
+        "id": 0,
+        "payload": [
+          {
+            "name": "current_leakage_val_port_1",
+            "component": "ad_value"
+          },
+          {
+            "name": "current_leakage_val_port_2",
+            "component": "ad_value"
+          },
+          {
+            "name": "leakage_alarm_trigg_value",
+            "component": "trigg_value"
+          },
+          {
+            "name": "leakage_alarm_reset_value",
+            "component": "reset_value"
+          },
+          {
+            "name": "leakage_detected_now_port_1",
+            "component": "bitData"
+          },
+          {
+            "name": "leakage_detected_now_port_2",
+            "component": "bitData"
+          },
+          {
+            "name": "leakage_detected_last_24_h_port_1",
+            "component": "bitData"
+          },
+          {
+            "name": "leakage_detected_last_24_h_port_2",
+            "component": "bitData"
+          },
+          {
+            "name": "days_since_last_leakage",
+            "component": "days_last_leakage"
+          },
+          {
+            "name": "duration_of_last_alarm_port_1",
+            "component": "duration"
+          },
+          {
+            "name": "duration_of_last_alarm_port_2",
+            "component": "duration"
+          },
+          {
+            "name": "op_years",
+            "component": "op_years"
+          },
+          {
+            "name": "run_time",
+            "component": "run_time"
+          },
+          {
+            "name": "battery_voltage",
+            "component": "battery"
+          },
+          {
+            "name": "low_batt",
+            "component": "bitData"
+          },
+          {
+            "name": "device_not_activated",
+            "component": "bitData"
+          },
+          {
+            "name": "async_message",
+            "component": "bitData"
+          }
+        ]
+      }
+    ],
+    "component": {
+      "ad_value": {
+        "size": 8,
+        "type": "uint",
+        "func": "$*5",
+        "unit": "AD",
+        "littleEndian": false
+      },
+      "trigg_value": {
+        "size": 1,
+        "type": "uint",
+        "func": "$+700",
+        "unit": "AD",
+        "littleEndian": false
+      },
+      "days_last_leakage": {
+        "size": 13,
+        "type": "uint",
+        "func": "$",
+        "unit": "days",
+        "littleEndian": false
+      },
+      "op_years": {
+        "size": 5,
+        "type": "uint",
+        "func": "$",
+        "unit": "years",
+        "littleEndian": false
+      },
+      "run_time": {
+        "size": 5,
+        "type": "uint",
+        "func": "$",
+        "unit": "years",
+        "littleEndian": false
+      },
+      "duration": {
+        "size": 14,
+        "type": "uint",
+        "func": "$",
+        "unit": "minutes",
+        "littleEndian": false
+      },
+      "battery": {
+        "size": 4,
+        "type": "uint",
+        "func": "($+18)/10",
+        "unit": "V",
+        "littleEndian": false
+      },
+      "reset_value": {
+        "size": 1,
+        "type": "uint",
+        "func": "$+800",
+        "unit": "AD",
+        "littleEndian": false
+      },
+      "bitData": {
+        "size": 1,
+        "type": "bool",
+        "unit": "",
+        "littleEndian": false
+      }
+    }
+  },
+  "type_eui": "A0412D0920006101",
+  "updated_at": "2026-08-27T00:00:00Z",
+  "version": "1.0.0"
+}

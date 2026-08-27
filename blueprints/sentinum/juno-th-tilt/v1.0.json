@@ -1,0 +1,118 @@
+{
+  "created_at": "2026-08-27T00:00:00Z",
+  "device_model_code": "juno-th-tilt",
+  "device_model_id": "f26e234c-de61-599c-9296-944379cc840c",
+  "device_model_name": "Juno TH TILT",
+  "id": "0fcd437c-3f62-578f-90c6-f60bb8e12bb9",
+  "is_default": true,
+  "manufacturer_name": "Sentinum",
+  "spec": {
+    "component": {
+      "bat_voltage": {
+        "func": "$/1000",
+        "littleEndian": false,
+        "size": 16,
+        "type": "uint",
+        "unit": "V"
+      },
+      "humidity": {
+        "littleEndian": false,
+        "size": 8,
+        "type": "uint",
+        "unit": "%"
+      },
+      "internal_temperature": {
+        "func": "$  - 128",
+        "littleEndian": false,
+        "size": 8,
+        "type": "uint",
+        "unit": "°C"
+      },
+      "temperature": {
+        "func": "floor((($/10 - 100)*100)+0.5)/100",
+        "littleEndian": false,
+        "size": 16,
+        "type": "uint",
+        "unit": "°C"
+      },
+      "humidity_alarm": {
+        "littleEndian": false,
+        "size": 8,
+        "type": "uint"
+      },
+      "uplink_counter": {
+        "func": "",
+        "littleEndian": false,
+        "size": 8,
+        "type": "uint",
+        "unit": ""
+      },
+      "version": {
+        "littleEndian": false,
+        "size": 4,
+        "type": "uint",
+        "unit": ""
+      }
+    },
+    "meta": {
+      "firmwareVersion": "1.0",
+      "hardwareVersion": "1.0",
+      "name": "Juno",
+      "vendor": "Sentinum"
+    },
+    "typeEui": "FCA84A0900000002",
+    "uplink": [
+      {
+        "id": 0,
+        "payload": [
+          {
+            "component": "version",
+            "name": "devEui"
+          },
+          {
+            "component": "version",
+            "name": "versionMajor"
+          },
+          {
+            "component": "version",
+            "name": "versionMinor"
+          },
+          {
+            "component": "version",
+            "name": "deviceSubType"
+          },
+          {
+            "component": "uplink_counter",
+            "name": "uplink_counter"
+          },
+          {
+            "component": "bat_voltage",
+            "name": "battery_voltage"
+          },
+          {
+            "component": "internal_temperature",
+            "name": "internal_temperature"
+          },
+          {
+            "component": "humidity_alarm",
+            "name": "humidity_alarm"
+          },
+          {
+            "component": "temperature",
+            "condition": "($deviceSubType \u0026 0x01) != 0",
+            "name": "temperature"
+          },
+          {
+            "component": "humidity",
+            "condition": "($deviceSubType \u0026 0x01) != 0",
+            "name": "humidity"
+          }
+        ]
+      }
+    ],
+    "version": "1.0"
+  },
+  "type_eui": "FCA84A0900000002",
+  "updated_at": "2026-08-27T00:00:00Z",
+  "version": "1.0"
+}

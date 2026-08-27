@@ -1,0 +1,146 @@
+{
+  "created_at": "2026-08-27T00:00:00Z",
+  "device_model_code": "febris-co2",
+  "device_model_id": "52f643d0-bb7c-5ef3-a22a-30556fa33678",
+  "device_model_name": "Febris CO2",
+  "id": "edfef838-20a1-5ea4-a692-4d5c7d3ed09a",
+  "is_default": true,
+  "manufacturer_name": "Sentinum",
+  "spec": {
+    "component": {
+      "version": {
+        "littleEndian": false,
+        "size": 4,
+        "type": "uint",
+        "unit": ""
+      },
+      "uplink_counter": {
+        "littleEndian": false,
+        "size": 8,
+        "type": "uint",
+        "unit": ""
+      },
+      "bat_voltage": {
+        "func": "$ / 1000",
+        "littleEndian": false,
+        "size": 16,
+        "type": "uint",
+        "unit": "V"
+      },
+      "temperature": {
+        "func": "($ / 10) - 100",
+        "littleEndian": false,
+        "size": 16,
+        "type": "int",
+        "unit": "°C"
+      },
+      "humidity": {
+        "littleEndian": false,
+        "size": 8,
+        "type": "uint",
+        "unit": "%"
+      },
+      "co2": {
+        "littleEndian": false,
+        "size": 16,
+        "type": "uint",
+        "unit": "ppm"
+      },
+      "pressure": {
+        "littleEndian": false,
+        "size": 16,
+        "type": "uint",
+        "unit": "hPa"
+      },
+      "alarm": {
+        "littleEndian": false,
+        "size": 8,
+        "type": "uint",
+        "unit": ""
+      },
+      "fifo": {
+        "littleEndian": false,
+        "size": 16,
+        "type": "uint",
+        "unit": ""
+      },
+      "dew_point": {
+        "func": "$  - 100",
+        "littleEndian": false,
+        "size": 8,
+        "type": "uint",
+        "unit": "°C"
+      }
+    },
+    "meta": {
+      "firmwareVersion": "1.3",
+      "hardwareVersion": "1.0",
+      "name": "Febris CO2",
+      "vendor": "sentinum"
+    },
+    "typeEui": "FCA84A0300000001",
+    "uplink": [
+      {
+        "id": 0,
+        "payload": [
+          {
+            "component": "version",
+            "name": "Modulecode"
+          },
+          {
+            "component": "version",
+            "name": "Major_Version"
+          },
+          {
+            "component": "version",
+            "name": "Minor_Version"
+          },
+          {
+            "component": "version",
+            "name": "Product_Version"
+          },
+          {
+            "component": "uplink_counter",
+            "name": "Uplink_Counter"
+          },
+          {
+            "component": "bat_voltage",
+            "name": "Battery_Voltage"
+          },
+          {
+            "component": "temperature",
+            "name": "Temperature"
+          },
+          {
+            "component": "humidity",
+            "name": "Humidity"
+          },
+          {
+            "component": "pressure",
+            "name": "Pressure"
+          },
+          {
+            "component": "co2",
+            "name": "CO2"
+          },
+          {
+            "component": "alarm",
+            "name": "Alarm"
+          },
+          {
+            "component": "fifo",
+            "name": "FIFO"
+          },
+          {
+            "component": "dew_point",
+            "name": "Dew_Point"
+          }
+        ]
+      }
+    ],
+    "version": "1.0"
+  },
+  "type_eui": "FCA84A0300000001",
+  "updated_at": "2026-08-27T00:00:00Z",
+  "version": "1.0"
+}

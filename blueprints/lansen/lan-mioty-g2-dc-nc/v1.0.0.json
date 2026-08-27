@@ -1,0 +1,153 @@
+{
+  "created_at": "2026-08-27T00:00:00Z",
+  "device_model_code": "lan-mioty-g2-dc-nc",
+  "device_model_id": "330ffcb5-80f0-53c8-a44d-835215497a7e",
+  "device_model_name": "LAN-MIOTY-G2-DC-NC",
+  "id": "e5279d06-60fa-56ab-a1e2-76929ae132e7",
+  "is_default": true,
+  "manufacturer_name": "Lansen",
+  "spec": {
+    "version": "1.0.0",
+    "typeEui": "A0412D0920006701",
+    "meta": {
+      "name": "LAN-MIOTY-G2-DC-NC",
+      "article": "LAN-920-0067",
+      "vendor": "Lansen",
+      "hardwareVersion": "1.0",
+      "firmwareVersion": "1.0"
+    },
+    "uplink": [
+      {
+        "id": 0,
+        "payload": [
+          {
+            "name": "total_openings_port_0",
+            "component": "total_nbr_of_openings_data"
+          },
+          {
+            "name": "total_openings_port_1",
+            "component": "total_nbr_of_openings_data"
+          },
+          {
+            "name": "currently_alarm_on_port_0",
+            "component": "bitData"
+          },
+          {
+            "name": "5min_alarm_on_port_0",
+            "component": "bitData"
+          },
+          {
+            "name": "10min_alarm_on_port_0",
+            "component": "bitData"
+          },
+          {
+            "name": "1h_alarm_on_port_0",
+            "component": "bitData"
+          },
+          {
+            "name": "24h_alarm_on_port_0",
+            "component": "bitData"
+          },
+          {
+            "name": "currently_alarm_on_port_1",
+            "component": "bitData"
+          },
+          {
+            "name": "5min_alarm_on_port_1",
+            "component": "bitData"
+          },
+          {
+            "name": "10min_alarm_on_port_1",
+            "component": "bitData"
+          },
+          {
+            "name": "1h_alarm_on_port_1",
+            "component": "bitData"
+          },
+          {
+            "name": "24h_alarm_on_port_1",
+            "component": "bitData"
+          },
+          {
+            "name": "minutes_since_last_alarm",
+            "component": "minutes_since_last_alarm_data"
+          },
+          {
+            "name": "duration_last_alarm",
+            "component": "duration_last_alarm_data"
+          },
+          {
+            "name": "last_alarm_input",
+            "component": "bitData"
+          },
+          {
+            "name": "op_years",
+            "component": "years"
+          },
+          {
+            "name": "run_time",
+            "component": "years"
+          },
+          {
+            "name": "battery_voltage",
+            "component": "battery"
+          },
+          {
+            "name": "low_batt",
+            "component": "bitData"
+          },
+          {
+            "name": "async_message",
+            "component": "bitData"
+          }
+        ]
+      }
+    ],
+    "component": {
+      "total_nbr_of_openings_data": {
+        "size": 13,
+        "type": "uint",
+        "func": "$",
+        "unit": "",
+        "littleEndian": false
+      },
+      "minutes_since_last_alarm_data": {
+        "size": 15,
+        "type": "uint",
+        "func": "$",
+        "unit": "minutes",
+        "littleEndian": false
+      },
+      "duration_last_alarm_data": {
+        "size": 12,
+        "type": "uint",
+        "func": "$",
+        "unit": "minutes",
+        "littleEndian": false
+      },
+      "battery": {
+        "size": 4,
+        "type": "uint",
+        "func": "($+18)/10",
+        "unit": "V",
+        "littleEndian": false
+      },
+      "years": {
+        "size": 5,
+        "type": "uint",
+        "func": "$",
+        "unit": "years",
+        "littleEndian": false
+      },
+      "bitData": {
+        "size": 1,
+        "type": "bool",
+        "unit": "",
+        "littleEndian": false
+      }
+    }
+  },
+  "type_eui": "A0412D0920006701",
+  "updated_at": "2026-08-27T00:00:00Z",
+  "version": "1.0.0"
+}

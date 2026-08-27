@@ -1,0 +1,2861 @@
+{
+  "created_at": "2026-08-27T00:00:00Z",
+  "device_model_code": "m-button",
+  "device_model_id": "b352cb39-2550-551b-9048-c150396b2578",
+  "device_model_name": "m.BUTTON",
+  "id": "518fd76c-2d1a-5dc3-bfb3-c3899529a077",
+  "is_default": true,
+  "manufacturer_name": "Swissphone",
+  "spec": {
+    "component": {
+      "uint32": {
+        "size": 32,
+        "littleEndian": false,
+        "type": "uint"
+      },
+      "uint24": {
+        "size": 24,
+        "littleEndian": false,
+        "type": "uint"
+      },
+      "uint16": {
+        "size": 16,
+        "littleEndian": false,
+        "type": "uint"
+      },
+      "uint12": {
+        "size": 12,
+        "littleEndian": false,
+        "type": "uint"
+      },
+      "uint8": {
+        "size": 8,
+        "littleEndian": false,
+        "type": "uint"
+      },
+      "uint7": {
+        "size": 7,
+        "littleEndian": false,
+        "type": "uint"
+      },
+      "uint6": {
+        "size": 6,
+        "littleEndian": false,
+        "type": "uint"
+      },
+      "uint5": {
+        "size": 5,
+        "littleEndian": false,
+        "type": "uint"
+      },
+      "uint4": {
+        "size": 4,
+        "littleEndian": false,
+        "type": "uint"
+      },
+      "uint3": {
+        "size": 3,
+        "littleEndian": false,
+        "type": "uint"
+      },
+      "uint2": {
+        "size": 2,
+        "littleEndian": false,
+        "type": "uint"
+      },
+      "bit": {
+        "size": 1,
+        "type": "bool"
+      },
+      "Temperature": {
+        "size": 7,
+        "littleEndian": false,
+        "type": "uint",
+        "func": "$ - 42",
+        "unit": "°C"
+      },
+      "Voltage": {
+        "size": 8,
+        "littleEndian": false,
+        "type": "uint",
+        "func": "($*0.008235)+1.6",
+        "unit": "V"
+      },
+      "Percent": {
+        "size": 7,
+        "littleEndian": false,
+        "type": "uint",
+        "unit": "%"
+      },
+      "Acceleration": {
+        "size": 15,
+        "littleEndian": false,
+        "type": "uint",
+        "func": "$ - 16000",
+        "unit": "mg"
+      },
+      "Rssi": {
+        "size": 7,
+        "littleEndian": false,
+        "type": "uint",
+        "func": "-$",
+        "unit": "dbm"
+      },
+      "SerialNumber": {
+        "size": 104,
+        "type": "string"
+      },
+      "Uuid": {
+        "size": 128,
+        "type": "binary"
+      },
+      "EPRssi": {
+        "size": 8,
+        "littleEndian": false,
+        "type": "uint",
+        "func": "($*0.5)-150",
+        "unit": "dbm"
+      },
+      "EPEqsnr": {
+        "size": 8,
+        "littleEndian": false,
+        "type": "uint",
+        "func": "($*0.25)-32",
+        "unit": "db"
+      }
+    },
+    "meta": {
+      "name": "m.Button protocol",
+      "vendor": "Swissphone"
+    },
+    "typeEui": "5c335cf96d627001",
+    "uplink": [
+      {
+        "id": 224,
+        "payload": [
+          {
+            "component": "bit",
+            "name": "resetOccurred"
+          },
+          {
+            "component": "bit",
+            "name": "signalError"
+          },
+          {
+            "component": "uint2",
+            "name": "batteryState"
+          },
+          {
+            "component": "uint2",
+            "name": "txDutyCycleState"
+          },
+          {
+            "component": "uint2",
+            "name": "temperatureState"
+          },
+          {
+            "component": "bit",
+            "name": "positioningActive"
+          },
+          {
+            "component": "bit",
+            "name": "alertActive"
+          },
+          {
+            "component": "bit",
+            "name": "reedSignal"
+          },
+          {
+            "component": "bit",
+            "name": "inMotion"
+          },
+          {
+            "component": "uint3",
+            "name": "orientation"
+          },
+          {
+            "component": "bit",
+            "name": "testModeActive"
+          },
+          {
+            "component": "bit",
+            "name": "requestRssiFeedback"
+          },
+          {
+            "component": "uint12",
+            "name": "statusMsgCounter"
+          },
+          {
+            "component": "Percent",
+            "name": "batteryPercent"
+          },
+          {
+            "component": "Temperature",
+            "name": "temperature"
+          },
+          {
+            "component": "Percent",
+            "name": "txDutyCycleMargin"
+          },
+          {
+            "component": "uint2",
+            "name": "txPowerLevel"
+          },
+          {
+            "component": "uint4",
+            "name": "padding",
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "id": 225,
+        "payload": [
+          {
+            "component": "bit",
+            "name": "accPresent",
+            "hidden": true
+          },
+          {
+            "component": "bit",
+            "name": "resetOccurred"
+          },
+          {
+            "component": "bit",
+            "name": "signalError"
+          },
+          {
+            "component": "uint2",
+            "name": "batteryState"
+          },
+          {
+            "component": "uint2",
+            "name": "txDutyCycleState"
+          },
+          {
+            "component": "uint2",
+            "name": "temperatureState"
+          },
+          {
+            "component": "bit",
+            "name": "positioningActive"
+          },
+          {
+            "component": "bit",
+            "name": "alertActive"
+          },
+          {
+            "component": "bit",
+            "name": "reedSignal"
+          },
+          {
+            "component": "bit",
+            "name": "inMotion"
+          },
+          {
+            "component": "uint3",
+            "name": "orientation"
+          },
+          {
+            "component": "bit",
+            "name": "testModeActive"
+          },
+          {
+            "component": "uint12",
+            "name": "statusMsgCounter"
+          },
+          {
+            "component": "uint12",
+            "name": "eventMsgCounter"
+          },
+          {
+            "component": "uint12",
+            "name": "locationMsgCounter"
+          },
+          {
+            "component": "Percent",
+            "name": "batteryPercent"
+          },
+          {
+            "component": "Voltage",
+            "name": "batteryVoltage"
+          },
+          {
+            "component": "uint24",
+            "name": "energyCounter"
+          },
+          {
+            "component": "Temperature",
+            "name": "temperature"
+          },
+          {
+            "component": "Percent",
+            "name": "txDutyCycleMargin"
+          },
+          {
+            "component": "uint16",
+            "name": "repetitionCounter"
+          },
+          {
+            "component": "uint16",
+            "name": "reedCounter"
+          },
+          {
+            "component": "Acceleration",
+            "name": "accX",
+            "condition": "$accPresent"
+          },
+          {
+            "component": "Acceleration",
+            "name": "accY",
+            "condition": "$accPresent"
+          },
+          {
+            "component": "Acceleration",
+            "name": "accZ",
+            "condition": "$accPresent"
+          },
+          {
+            "component": "uint16",
+            "name": "motionCounter",
+            "condition": "$accPresent"
+          },
+          {
+            "component": "bit",
+            "name": "padding",
+            "condition": "$accPresent",
+            "hidden": true
+          },
+          {
+            "component": "uint6",
+            "name": "padding",
+            "condition": "!$accPresent",
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "id": 226,
+        "payload": [
+          {
+            "component": "bit",
+            "name": "button1ShortPress"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongPress"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortPress"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongPress"
+          },
+          {
+            "component": "bit",
+            "name": "reedChanged"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterThresholdReached"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterOverflowed"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureStateChanged"
+          },
+          {
+            "component": "bit",
+            "name": "batteryStateChanged"
+          },
+          {
+            "component": "bit",
+            "name": "motionChanged"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapDetected"
+          },
+          {
+            "component": "bit",
+            "name": "orientationChanged"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetected"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetected"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterThresholdReached"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterOverflowed"
+          },
+          {
+            "component": "bit",
+            "name": "resetOccurred"
+          },
+          {
+            "component": "bit",
+            "name": "signalError"
+          },
+          {
+            "component": "uint2",
+            "name": "batteryState"
+          },
+          {
+            "component": "uint2",
+            "name": "txDutyCycleState"
+          },
+          {
+            "component": "uint2",
+            "name": "temperatureState"
+          },
+          {
+            "component": "bit",
+            "name": "positioningActive"
+          },
+          {
+            "component": "bit",
+            "name": "alertActive"
+          },
+          {
+            "component": "bit",
+            "name": "reedSignal"
+          },
+          {
+            "component": "bit",
+            "name": "inMotion"
+          },
+          {
+            "component": "uint3",
+            "name": "orientation"
+          },
+          {
+            "component": "bit",
+            "name": "testModeActive"
+          },
+          {
+            "component": "uint12",
+            "name": "eventMsgCounter"
+          },
+          {
+            "component": "Percent",
+            "name": "batteryPercent"
+          },
+          {
+            "component": "Temperature",
+            "name": "temperature"
+          },
+          {
+            "component": "uint6",
+            "name": "padding",
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "id": 227,
+        "payload": [
+          {
+            "component": "bit",
+            "name": "accPresent",
+            "hidden": true
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortPress"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongPress"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortPress"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongPress"
+          },
+          {
+            "component": "bit",
+            "name": "reedChanged"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterThresholdReached"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterOverflowed"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureStateChanged"
+          },
+          {
+            "component": "bit",
+            "name": "batteryStateChanged"
+          },
+          {
+            "component": "bit",
+            "name": "motionChanged"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapDetected"
+          },
+          {
+            "component": "bit",
+            "name": "orientationChanged"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetected"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetected"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterThresholdReached"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterOverflowed"
+          },
+          {
+            "component": "bit",
+            "name": "resetOccurred"
+          },
+          {
+            "component": "bit",
+            "name": "signalError"
+          },
+          {
+            "component": "uint2",
+            "name": "batteryState"
+          },
+          {
+            "component": "uint2",
+            "name": "txDutyCycleState"
+          },
+          {
+            "component": "uint2",
+            "name": "temperatureState"
+          },
+          {
+            "component": "bit",
+            "name": "positioningActive"
+          },
+          {
+            "component": "bit",
+            "name": "alertActive"
+          },
+          {
+            "component": "bit",
+            "name": "reedSignal"
+          },
+          {
+            "component": "bit",
+            "name": "inMotion"
+          },
+          {
+            "component": "uint3",
+            "name": "orientation"
+          },
+          {
+            "component": "bit",
+            "name": "testModeActive"
+          },
+          {
+            "component": "uint12",
+            "name": "eventMsgCounter"
+          },
+          {
+            "component": "Percent",
+            "name": "batteryPercent"
+          },
+          {
+            "component": "Temperature",
+            "name": "temperature"
+          },
+          {
+            "component": "uint16",
+            "name": "reedCounter"
+          },
+          {
+            "component": "Acceleration",
+            "name": "accX",
+            "condition": "$accPresent"
+          },
+          {
+            "component": "Acceleration",
+            "name": "accY",
+            "condition": "$accPresent"
+          },
+          {
+            "component": "Acceleration",
+            "name": "accZ",
+            "condition": "$accPresent"
+          },
+          {
+            "component": "uint16",
+            "name": "motionCounter",
+            "condition": "$accPresent"
+          },
+          {
+            "component": "uint5",
+            "name": "padding",
+            "condition": "!$accPresent",
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "id": 228,
+        "payload": [
+          {
+            "component": "bit",
+            "name": "resetOccurred"
+          },
+          {
+            "component": "bit",
+            "name": "signalError"
+          },
+          {
+            "component": "uint2",
+            "name": "batteryState"
+          },
+          {
+            "component": "uint2",
+            "name": "txDutyCycleState"
+          },
+          {
+            "component": "uint2",
+            "name": "temperatureState"
+          },
+          {
+            "component": "bit",
+            "name": "positioningActive"
+          },
+          {
+            "component": "bit",
+            "name": "alertActive"
+          },
+          {
+            "component": "bit",
+            "name": "reedSignal"
+          },
+          {
+            "component": "bit",
+            "name": "inMotion"
+          },
+          {
+            "component": "uint3",
+            "name": "orientation"
+          },
+          {
+            "component": "bit",
+            "name": "testModeActive"
+          },
+          {
+            "component": "uint12",
+            "name": "locationMsgCounter"
+          },
+          {
+            "component": "Percent",
+            "name": "batteryPercent"
+          },
+          {
+            "component": "Temperature",
+            "name": "temperature"
+          },
+          {
+            "component": "uint2",
+            "name": "beaconNb",
+            "hidden": true
+          },
+          {
+            "component": "uint16",
+            "name": "Beacon1Major",
+            "condition": "$beaconNb \u003e= 1"
+          },
+          {
+            "component": "uint16",
+            "name": "Beacon1Minor",
+            "condition": "$beaconNb \u003e= 1"
+          },
+          {
+            "component": "uint12",
+            "name": "Beacon1Age",
+            "condition": "$beaconNb \u003e= 1"
+          },
+          {
+            "component": "Rssi",
+            "name": "Beacon1Rssi",
+            "condition": "$beaconNb \u003e= 1"
+          },
+          {
+            "component": "uint16",
+            "name": "Beacon2Major",
+            "condition": "$beaconNb \u003e= 2"
+          },
+          {
+            "component": "uint16",
+            "name": "Beacon2Minor",
+            "condition": "$beaconNb \u003e= 2"
+          },
+          {
+            "component": "uint12",
+            "name": "Beacon2Age",
+            "condition": "$beaconNb \u003e= 2"
+          },
+          {
+            "component": "Rssi",
+            "name": "Beacon2Rssi",
+            "condition": "$beaconNb \u003e= 2"
+          },
+          {
+            "component": "uint16",
+            "name": "Beacon3Major",
+            "condition": "$beaconNb \u003e= 3"
+          },
+          {
+            "component": "uint16",
+            "name": "Beacon3Minor",
+            "condition": "$beaconNb \u003e= 3"
+          },
+          {
+            "component": "uint12",
+            "name": "Beacon3Age",
+            "condition": "$beaconNb \u003e= 3"
+          },
+          {
+            "component": "Rssi",
+            "name": "Beacon3Rssi",
+            "condition": "$beaconNb \u003e= 3"
+          },
+          {
+            "component": "uint4",
+            "name": "padding",
+            "condition": "$beaconNb == 0",
+            "hidden": true
+          },
+          {
+            "component": "bit",
+            "name": "padding",
+            "condition": "$beaconNb == 1",
+            "hidden": true
+          },
+          {
+            "component": "uint6",
+            "name": "padding",
+            "condition": "$beaconNb == 2",
+            "hidden": true
+          },
+          {
+            "component": "uint3",
+            "name": "padding",
+            "condition": "$beaconNb == 3",
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "id": 229,
+        "payload": [
+          {
+            "component": "bit",
+            "name": "resetOccurred"
+          },
+          {
+            "component": "bit",
+            "name": "signalError"
+          },
+          {
+            "component": "uint2",
+            "name": "batteryState"
+          },
+          {
+            "component": "uint2",
+            "name": "txDutyCycleState"
+          },
+          {
+            "component": "uint2",
+            "name": "temperatureState"
+          },
+          {
+            "component": "bit",
+            "name": "positioningActive"
+          },
+          {
+            "component": "bit",
+            "name": "alertActive"
+          },
+          {
+            "component": "bit",
+            "name": "reedSignal"
+          },
+          {
+            "component": "bit",
+            "name": "inMotion"
+          },
+          {
+            "component": "uint3",
+            "name": "orientation"
+          },
+          {
+            "component": "bit",
+            "name": "testModeActive"
+          },
+          {
+            "component": "Percent",
+            "name": "batteryPercent"
+          },
+          {
+            "component": "Temperature",
+            "name": "temperature"
+          },
+          {
+            "component": "uint4",
+            "name": "hardwareIndex"
+          },
+          {
+            "component": "uint4",
+            "name": "hardwareSubindex"
+          },
+          {
+            "component": "uint8",
+            "name": "hardwareVariant"
+          },
+          {
+            "component": "uint16",
+            "name": "hardwarePeripherals"
+          },
+          {
+            "component": "uint4",
+            "name": "firmwareVersionMajor"
+          },
+          {
+            "component": "uint7",
+            "name": "firmwareVersionMinor"
+          },
+          {
+            "component": "uint7",
+            "name": "firmwareVersionPatch"
+          },
+          {
+            "component": "SerialNumber",
+            "name": "S/N"
+          },
+          {
+            "component": "uint32",
+            "name": "configCRC"
+          },
+          {
+            "component": "uint8",
+            "name": "configId"
+          },
+          {
+            "component": "uint6",
+            "name": "statusPeriod"
+          },
+          {
+            "component": "uint5",
+            "name": "statusPeriodIfActive"
+          },
+          {
+            "component": "uint2",
+            "name": "statusBatteryTempMeasurePeriod"
+          },
+          {
+            "component": "uint2",
+            "name": "statusLed"
+          },
+          {
+            "component": "bit",
+            "name": "cradleDetection"
+          },
+          {
+            "component": "uint3",
+            "name": "batteryWarningThreshold"
+          },
+          {
+            "component": "uint3",
+            "name": "batteryErrorThreshold"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorStartPositioning"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorClickNotification"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorLedNotification"
+          },
+          {
+            "component": "uint2",
+            "name": "buttonLongpressDuration"
+          },
+          {
+            "component": "uint2",
+            "name": "button1EventTrigger"
+          },
+          {
+            "component": "bit",
+            "name": "button1KeyVibration"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "button1ShortpressEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "button1ShortpressEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "button1ShortpressEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "button1ShortpressEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "button1ShortpressEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "button1LongpressEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "button1LongpressEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "button1LongpressEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "button1LongpressEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "button1LongpressEventBehaviorLed"
+          },
+          {
+            "component": "uint2",
+            "name": "button2EventTrigger"
+          },
+          {
+            "component": "bit",
+            "name": "button2KeyVibration"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "button2ShortpressEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "button2ShortpressEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "button2ShortpressEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "button2ShortpressEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "button2ShortpressEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "button2LongpressEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "button2LongpressEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "button2LongpressEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "button2LongpressEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "button2LongpressEventBehaviorLed"
+          },
+          {
+            "component": "uint2",
+            "name": "reedEventTrigger"
+          },
+          {
+            "component": "uint4",
+            "name": "reedDwelltime"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "reedEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "reedEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "reedEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "reedEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "reedEventBehaviorLed"
+          },
+          {
+            "component": "uint16",
+            "name": "reedCounterThreshold"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "reedCounterEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "reedCounterEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "reedCounterEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "reedCounterEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "reedCounterEventBehaviorLed"
+          },
+          {
+            "component": "uint2",
+            "name": "alertLedSelection"
+          },
+          {
+            "component": "bit",
+            "name": "alertLedBrightness"
+          },
+          {
+            "component": "uint2",
+            "name": "alertVibratorStrength"
+          },
+          {
+            "component": "uint2",
+            "name": "alertBeeperVolume"
+          },
+          {
+            "component": "uint3",
+            "name": "alertDuration"
+          },
+          {
+            "component": "uint2",
+            "name": "positioningMode"
+          },
+          {
+            "component": "uint3",
+            "name": "positioningInterval"
+          },
+          {
+            "component": "uint2",
+            "name": "positioningTimeout"
+          },
+          {
+            "component": "Uuid",
+            "name": "positioningUuid"
+          },
+          {
+            "component": "Temperature",
+            "name": "temperatureLowerThreshold"
+          },
+          {
+            "component": "Temperature",
+            "name": "temperatureUpperThreshold"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "temperatureEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "temperatureEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "temperatureEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "temperatureEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "temperatureEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "miotyAdaptivePower"
+          },
+          {
+            "component": "uint2",
+            "name": "miotyTxPowerLevel"
+          },
+          {
+            "component": "uint3",
+            "name": "miotyNoAckPattern"
+          },
+          {
+            "component": "uint2",
+            "name": "miotyRepetition"
+          },
+          {
+            "component": "bit",
+            "name": "miotyOtaaEnabled"
+          },
+          {
+            "component": "uint2",
+            "name": "motionTriggerEnable"
+          },
+          {
+            "component": "uint2",
+            "name": "motionTriggerThreshold"
+          },
+          {
+            "component": "uint2",
+            "name": "motionTriggerDuration"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "motionEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "motionEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "motionEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "motionEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "motionEventBehaviorLed"
+          },
+          {
+            "component": "uint16",
+            "name": "motionCounterThreshold"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "motionCounterEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "motionCounterEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "motionCounterEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "motionCounterEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "motionCounterEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapTriggerEnable"
+          },
+          {
+            "component": "uint2",
+            "name": "doubleTapThreshold"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapLatency"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "doubleTapEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "doubleTapEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "doubleTapEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "doubleTapEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "doubleTapEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "tiltTriggerEnable"
+          },
+          {
+            "component": "uint3",
+            "name": "tiltDwellTime"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "tiltEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "tiltEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "tiltEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "tiltEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "tiltEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEnable"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionSilentPrealert"
+          },
+          {
+            "component": "uint7",
+            "name": "manDownDetectionPrealertTime"
+          },
+          {
+            "component": "uint2",
+            "name": "manDownDetectionCarryOrientation"
+          },
+          {
+            "component": "uint3",
+            "name": "manDownDetectionActivationAngle"
+          },
+          {
+            "component": "uint5",
+            "name": "manDownDetectionActivationDelay"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionPrologedEnable"
+          },
+          {
+            "component": "uint6",
+            "name": "manDownDetectionProlongedActivationDelay"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "manDownDetectionEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "manDownDetectionEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "manDownDetectionEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "manDownDetectionEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "manDownDetectionEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEnable"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionSilentPrealert"
+          },
+          {
+            "component": "uint7",
+            "name": "fallDetectionPrealertTime"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "fallDetectionEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "fallDetectionEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "fallDetectionEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "fallDetectionEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "fallDetectionEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "ledBrightness"
+          },
+          {
+            "component": "uint2",
+            "name": "vibratorStrength"
+          },
+          {
+            "component": "uint2",
+            "name": "beeperVolume"
+          },
+          {
+            "component": "bit",
+            "name": "testModeUplinkTriggerButton1"
+          },
+          {
+            "component": "bit",
+            "name": "testModeUplinkTriggerButton2"
+          },
+          {
+            "component": "bit",
+            "name": "testModeUplinkTriggerReed"
+          },
+          {
+            "component": "bit",
+            "name": "testModeUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "testModeDisableDutyCycleLimiter"
+          },
+          {
+            "component": "bit",
+            "name": "testModeDisableDownlink"
+          },
+          {
+            "component": "uint4",
+            "name": "testModeInterval"
+          },
+          {
+            "component": "uint3",
+            "name": "padding",
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "id": 230,
+        "payload": [
+          {
+            "component": "bit",
+            "name": "resetOccurred"
+          },
+          {
+            "component": "bit",
+            "name": "signalError"
+          },
+          {
+            "component": "uint2",
+            "name": "batteryState"
+          },
+          {
+            "component": "uint2",
+            "name": "txDutyCycleState"
+          },
+          {
+            "component": "uint2",
+            "name": "temperatureState"
+          },
+          {
+            "component": "bit",
+            "name": "positioningActive"
+          },
+          {
+            "component": "bit",
+            "name": "alertActive"
+          },
+          {
+            "component": "bit",
+            "name": "reedSignal"
+          },
+          {
+            "component": "bit",
+            "name": "inMotion"
+          },
+          {
+            "component": "uint3",
+            "name": "orientation"
+          },
+          {
+            "component": "bit",
+            "name": "testModeActive"
+          },
+          {
+            "component": "Percent",
+            "name": "batteryPercent"
+          },
+          {
+            "component": "Temperature",
+            "name": "temperature"
+          },
+          {
+            "component": "uint8",
+            "name": "configId"
+          },
+          {
+            "component": "uint32",
+            "name": "configCRC"
+          },
+          {
+            "component": "uint2",
+            "name": "configConsistency"
+          }
+        ]
+      }
+    ],
+    "downlink": [
+      {
+        "id": 224,
+        "payload": [
+          {
+            "component": "EPRssi",
+            "name": "EPRSSI"
+          },
+          {
+            "component": "EPEqsnr",
+            "name": "EPEQSNR"
+          }
+        ]
+      },
+      {
+        "id": 225,
+        "payload": [
+          {
+            "component": "bit",
+            "name": "resetCounterPresent",
+            "hidden": true
+          },
+          {
+            "component": "uint4",
+            "name": "mode"
+          },
+          {
+            "component": "uint2",
+            "name": "positioning"
+          },
+          {
+            "component": "uint2",
+            "name": "alert"
+          },
+          {
+            "component": "uint5",
+            "name": "alertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "alertColorTheme"
+          },
+          {
+            "component": "uint3",
+            "name": "requestUplink"
+          },
+          {
+            "component": "bit",
+            "name": "resetReedCounter",
+            "condition": "$resetCounterPresent"
+          },
+          {
+            "component": "bit",
+            "name": "resetMotionCounter",
+            "condition": "$resetCounterPresent"
+          },
+          {
+            "component": "bit",
+            "name": "resetStatusMsgCounter",
+            "condition": "$resetCounterPresent"
+          },
+          {
+            "component": "bit",
+            "name": "resetEventMsgCounter",
+            "condition": "$resetCounterPresent"
+          },
+          {
+            "component": "bit",
+            "name": "resetLocationMsgCounter",
+            "condition": "$resetCounterPresent"
+          },
+          {
+            "component": "bit",
+            "name": "resetRepetitionCounter",
+            "condition": "$resetCounterPresent"
+          },
+          {
+            "component": "bit",
+            "name": "restoreEnergyCounter",
+            "condition": "$resetCounterPresent"
+          },
+          {
+            "component": "uint24",
+            "name": "energyCounterValue",
+            "condition": "$resetCounterPresent"
+          },
+          {
+            "component": "uint4",
+            "name": "padding",
+            "hidden": true,
+            "condition": "$resetCounterPresent"
+          },
+          {
+            "component": "uint3",
+            "name": "padding",
+            "hidden": true,
+            "condition": "!$resetCounterPresent"
+          }
+        ]
+      },
+      {
+        "id": 226,
+        "payload": [
+          {
+            "component": "uint8",
+            "name": "configId"
+          },
+          {
+            "component": "uint6",
+            "name": "statusPeriod"
+          },
+          {
+            "component": "uint5",
+            "name": "statusPeriodIfActive"
+          },
+          {
+            "component": "uint2",
+            "name": "statusBatteryTempMeasurePeriod"
+          },
+          {
+            "component": "uint2",
+            "name": "statusLed"
+          },
+          {
+            "component": "bit",
+            "name": "cradleDetection"
+          },
+          {
+            "component": "uint3",
+            "name": "batteryWarningThreshold"
+          },
+          {
+            "component": "uint3",
+            "name": "batteryErrorThreshold"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorStartPositioning"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorClickNotification"
+          },
+          {
+            "component": "bit",
+            "name": "batteryErrorBehaviorLedNotification"
+          },
+          {
+            "component": "uint2",
+            "name": "buttonLongpressDuration"
+          },
+          {
+            "component": "uint2",
+            "name": "button1EventTrigger"
+          },
+          {
+            "component": "bit",
+            "name": "button1KeyVibration"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "button1ShortpressEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "button1ShortpressEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "button1ShortpressEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "button1ShortpressEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "button1ShortpressEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "button1ShortpressEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "button1LongpressEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "button1LongpressEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "button1LongpressEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "button1LongpressEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "button1LongpressEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "button1LongpressEventBehaviorLed"
+          },
+          {
+            "component": "uint2",
+            "name": "button2EventTrigger"
+          },
+          {
+            "component": "bit",
+            "name": "button2KeyVibration"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "button2ShortpressEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "button2ShortpressEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "button2ShortpressEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "button2ShortpressEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "button2ShortpressEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "button2ShortpressEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "button2LongpressEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "button2LongpressEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "button2LongpressEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "button2LongpressEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "button2LongpressEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "button2LongpressEventBehaviorLed"
+          },
+          {
+            "component": "uint2",
+            "name": "reedEventTrigger"
+          },
+          {
+            "component": "uint4",
+            "name": "reedDwelltime"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "reedEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "reedEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "reedEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "reedEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "reedEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "reedEventBehaviorLed"
+          },
+          {
+            "component": "uint16",
+            "name": "reedCounterThreshold"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "reedCounterEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "reedCounterEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "reedCounterEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "reedCounterEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "reedCounterEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "reedCounterEventBehaviorLed"
+          },
+          {
+            "component": "uint2",
+            "name": "alertLedSelection"
+          },
+          {
+            "component": "bit",
+            "name": "alertLedBrightness"
+          },
+          {
+            "component": "uint2",
+            "name": "alertVibratorStrength"
+          },
+          {
+            "component": "uint2",
+            "name": "alertBeeperVolume"
+          },
+          {
+            "component": "uint3",
+            "name": "alertDuration"
+          },
+          {
+            "component": "uint2",
+            "name": "positioningMode"
+          },
+          {
+            "component": "uint3",
+            "name": "positioningInterval"
+          },
+          {
+            "component": "uint2",
+            "name": "positioningTimeout"
+          },
+          {
+            "component": "Uuid",
+            "name": "positioningUuid"
+          },
+          {
+            "component": "Temperature",
+            "name": "temperatureLowerThreshold"
+          },
+          {
+            "component": "Temperature",
+            "name": "temperatureUpperThreshold"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "temperatureEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "temperatureEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "temperatureEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "temperatureEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "temperatureEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "temperatureEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "miotyAdaptivePower"
+          },
+          {
+            "component": "uint2",
+            "name": "miotyTxPowerLevel"
+          },
+          {
+            "component": "uint3",
+            "name": "miotyNoAckPattern"
+          },
+          {
+            "component": "uint2",
+            "name": "miotyRepetition"
+          },
+          {
+            "component": "bit",
+            "name": "miotyOtaaEnabled"
+          },
+          {
+            "component": "uint2",
+            "name": "motionTriggerEnable"
+          },
+          {
+            "component": "uint2",
+            "name": "motionTriggerThreshold"
+          },
+          {
+            "component": "uint2",
+            "name": "motionTriggerDuration"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "motionEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "motionEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "motionEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "motionEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "motionEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "motionEventBehaviorLed"
+          },
+          {
+            "component": "uint16",
+            "name": "motionCounterThreshold"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "motionCounterEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "motionCounterEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "motionCounterEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "motionCounterEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "motionCounterEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "motionCounterEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapTriggerEnable"
+          },
+          {
+            "component": "uint2",
+            "name": "doubleTapThreshold"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapLatency"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "doubleTapEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "doubleTapEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "doubleTapEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "doubleTapEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "doubleTapEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "doubleTapEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "tiltTriggerEnable"
+          },
+          {
+            "component": "uint3",
+            "name": "tiltDwellTime"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "tiltEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "tiltEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "tiltEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "tiltEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "tiltEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "tiltEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEnable"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionSilentPrealert"
+          },
+          {
+            "component": "uint7",
+            "name": "manDownDetectionPrealertTime"
+          },
+          {
+            "component": "uint2",
+            "name": "manDownDetectionCarryOrientation"
+          },
+          {
+            "component": "uint3",
+            "name": "manDownDetectionActivationAngle"
+          },
+          {
+            "component": "uint5",
+            "name": "manDownDetectionActivationDelay"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionPrologedEnable"
+          },
+          {
+            "component": "uint6",
+            "name": "manDownDetectionProlongedActivationDelay"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "manDownDetectionEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "manDownDetectionEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "manDownDetectionEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "manDownDetectionEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "manDownDetectionEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "manDownDetectionEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEnable"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionSilentPrealert"
+          },
+          {
+            "component": "uint7",
+            "name": "fallDetectionPrealertTime"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorSendUplink"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorUplinkPriority"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorPayload"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorStartPositioning"
+          },
+          {
+            "component": "uint4",
+            "name": "fallDetectionEventBehaviorEventPattern"
+          },
+          {
+            "component": "uint5",
+            "name": "fallDetectionEventBehaviorAlertPattern"
+          },
+          {
+            "component": "uint4",
+            "name": "fallDetectionEventBehaviorAlertColorTheme"
+          },
+          {
+            "component": "uint4",
+            "name": "fallDetectionEventBehaviorAckPattern"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorVibrator"
+          },
+          {
+            "component": "bit",
+            "name": "fallDetectionEventBehaviorBeeper"
+          },
+          {
+            "component": "uint2",
+            "name": "fallDetectionEventBehaviorLed"
+          },
+          {
+            "component": "bit",
+            "name": "ledBrightness"
+          },
+          {
+            "component": "uint2",
+            "name": "vibratorStrength"
+          },
+          {
+            "component": "uint2",
+            "name": "beeperVolume"
+          },
+          {
+            "component": "bit",
+            "name": "testModeUplinkTriggerButton1"
+          },
+          {
+            "component": "bit",
+            "name": "testModeUplinkTriggerButton2"
+          },
+          {
+            "component": "bit",
+            "name": "testModeUplinkTriggerReed"
+          },
+          {
+            "component": "bit",
+            "name": "testModeUplinkMode"
+          },
+          {
+            "component": "bit",
+            "name": "testModeDisableDutyCycleLimiter"
+          },
+          {
+            "component": "bit",
+            "name": "testModeDisableDownlink"
+          },
+          {
+            "component": "uint4",
+            "name": "testModeInterval"
+          },
+          {
+            "component": "uint3",
+            "name": "padding",
+            "hidden": true
+          }
+        ]
+      }
+    ],
+    "version": "0.1.0"
+  },
+  "type_eui": "5C335CF96D627001",
+  "updated_at": "2026-08-27T00:00:00Z",
+  "version": "0.1.0"
+}
