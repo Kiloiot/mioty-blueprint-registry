@@ -67,6 +67,9 @@ Each file wraps the blueprint `spec` in a small envelope of catalog metadata:
 | `is_default` | whether this is the default blueprint for the model |
 | `created_at`, `updated_at` | RFC3339 timestamps |
 
+Each model has exactly one version with `"is_default": true`. When you add a new version and make it
+the default, set `"is_default": false` on the previous default in the same pull request.
+
 `spec` is kept exactly as the manufacturer publishes it — key order and all — so an entry can be
 compared against the vendor's own file byte for byte after re-indenting.
 
