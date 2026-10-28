@@ -1,0 +1,39 @@
+{
+  "device_model_code": "four",
+  "device_model_id": "3cb940f8-333a-5cc0-8a8e-eb35af00b7bf",
+  "device_model_name": "Four",
+  "id": "2fb5bb13-5b10-5864-91e7-df9ecda34ab7",
+  "is_default": true,
+  "manufacturer_name": "Beta",
+  "spec": {
+    "meta": {
+      "name": "Test device",
+      "vendor": "Acme"
+    },
+    "uplink": [
+      {
+        "id": 0,
+        "crypto": 0,
+        "payload": [
+          {
+            "name": "temperature",
+            "component": "temp16"
+          }
+        ]
+      }
+    ],
+    "typeEui": "70B3D59CD0000102",
+    "version": "1.0",
+    "component": {
+      "temp16": {
+        "func": "$/10",
+        "size": 16,
+        "type": "int",
+        "unit": "°C",
+        "littleEndian": false
+      }
+    }
+  },
+  "type_eui": "70B3D59CD0000102",
+  "version": "1.0"
+}

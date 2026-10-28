@@ -1,0 +1,39 @@
+{
+  "device_model_code": "two",
+  "device_model_id": "6aadd694-16a7-56a8-8320-f8cf1174ce5c",
+  "device_model_name": "Two",
+  "id": "0bf39487-1105-55da-9175-b235fbef0cb5",
+  "is_default": true,
+  "manufacturer_name": "Acme",
+  "spec": {
+    "meta": {
+      "name": "Test device",
+      "vendor": "Acme"
+    },
+    "uplink": [
+      {
+        "id": 0,
+        "crypto": 0,
+        "payload": [
+          {
+            "name": "temperature",
+            "component": "temp16"
+          }
+        ]
+      }
+    ],
+    "typeEui": "70B3D59CD0000101",
+    "version": "1.0",
+    "component": {
+      "temp16": {
+        "func": "$/10",
+        "size": 16,
+        "type": "int",
+        "unit": "°C",
+        "littleEndian": false
+      }
+    }
+  },
+  "type_eui": "70B3D59CD0000101",
+  "version": "1.0"
+}

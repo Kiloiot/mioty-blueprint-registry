@@ -1,0 +1,39 @@
+{
+  "device_model_code": "thing",
+  "device_model_id": "840f680b-b320-5936-beb0-7bff1b8f0a23",
+  "device_model_name": "Thing",
+  "id": "9cb98008-085a-55f1-bbec-86e5cc145590",
+  "is_default": true,
+  "manufacturer_name": "Tools",
+  "spec": {
+    "meta": {
+      "name": "Test device",
+      "vendor": "Acme"
+    },
+    "uplink": [
+      {
+        "id": 0,
+        "crypto": 0,
+        "payload": [
+          {
+            "name": "temperature",
+            "component": "temp16"
+          }
+        ]
+      }
+    ],
+    "typeEui": "70B3D59CD0000101",
+    "version": "1.0",
+    "component": {
+      "temp16": {
+        "func": "$/10",
+        "size": 16,
+        "type": "int",
+        "unit": "°C",
+        "littleEndian": false
+      }
+    }
+  },
+  "type_eui": "70B3D59CD0000101",
+  "version": "1"
+}

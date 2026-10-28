@@ -1,0 +1,39 @@
+{
+  "device_model_code": "three",
+  "device_model_id": "89af0db6-85ce-528e-a979-c5f320724ce9",
+  "device_model_name": "Three",
+  "id": "0202abd4-c97d-56b7-b6d2-1917ea2d22b2",
+  "is_default": true,
+  "manufacturer_name": "Beta",
+  "spec": {
+    "meta": {
+      "name": "Test device",
+      "vendor": "Acme"
+    },
+    "uplink": [
+      {
+        "id": 0,
+        "crypto": 0,
+        "payload": [
+          {
+            "name": "temperature",
+            "component": "temp16"
+          }
+        ]
+      }
+    ],
+    "typeEui": "70b3d59cd0000102",
+    "version": "1.0",
+    "component": {
+      "temp16": {
+        "func": "$/10",
+        "size": 16,
+        "type": "int",
+        "unit": "°C",
+        "littleEndian": false
+      }
+    }
+  },
+  "type_eui": "70b3d59cd0000102",
+  "version": "1.0"
+}

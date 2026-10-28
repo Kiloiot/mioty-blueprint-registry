@@ -102,6 +102,12 @@ Please make sure a new entry: uses the device's real Type EUI (a placeholder Typ
 a real device); does not collide with a Type EUI already in the registry; and parses and validates
 against the MIOTY Application Layer Specification.
 
+Every pull request is checked by `.github/check` (folders starting with a dot are not records; any other
+`.json` outside the `{manufacturer}/{model}/v{version}.json` layout is an error): layout and envelope,
+the Type EUI format and its match with `spec.typeEui` (case-insensitive), `spec.version` equal to
+`version`, one default version per model, no Type EUI shared by two models, the specification accepted
+by the KiloCenter decoder, size limits.
+
 ## License
 
 Blueprint specifications contributed to this repository are licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).

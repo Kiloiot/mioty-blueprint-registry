@@ -1,0 +1,5 @@
+acme/one: type_eui: 70B3D59CD0000101 is also used by acme/two
+acme/two: type_eui: 70B3D59CD0000101 is also used by acme/one
+beta/four: type_eui: 70B3D59CD0000102 is also used by beta/three
+beta/three: type_eui: 70B3D59CD0000102 is also used by beta/four
+beta/three/v1.0.json: type_eui: must be 16 uppercase hex characters

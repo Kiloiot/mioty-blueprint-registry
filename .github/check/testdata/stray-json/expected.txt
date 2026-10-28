@@ -1,0 +1,3 @@
+acme/widget.json: path: .json outside the {manufacturer}/{model}/v{version}.json layout
+acme/widget/old/v1.0.json: path: .json outside the {manufacturer}/{model}/v{version}.json layout
+root.json: path: .json outside the {manufacturer}/{model}/v{version}.json layout

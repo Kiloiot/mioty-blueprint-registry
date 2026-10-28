@@ -1,0 +1,37 @@
+name: check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GOFLAGS: -mod=readonly
+      GOWORK: "off"
+      GOTOOLCHAIN: local
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version-file: .github/check/go.mod
+          cache-dependency-path: .github/check/go.sum
+      - name: check the registry
+        working-directory: .github/check
+        run: go run . ../..
+      - name: go mod tidy
+        if: ${{ !cancelled() }}
+        working-directory: .github/check
+        run: go mod tidy -diff
+      - name: go test
+        if: ${{ !cancelled() }}
+        working-directory: .github/check
+        run: go test ./...
