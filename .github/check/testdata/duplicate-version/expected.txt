@@ -1,0 +1,2 @@
+acme/widget: version: "1.0" is used by 2 files
+acme/widget/v1.0-copy.json: path: file name must be "v1.0.json" for version "1.0"

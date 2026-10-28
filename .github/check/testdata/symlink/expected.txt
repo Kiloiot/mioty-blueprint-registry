@@ -1,0 +1,1 @@
+acme/gadget/v1.0.json: path: not a regular file

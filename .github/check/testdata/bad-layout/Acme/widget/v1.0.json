@@ -1,0 +1,39 @@
+{
+  "device_model_code": "widget",
+  "device_model_id": "fa685f17-ae51-5d6e-9f88-8871be8a9d9b",
+  "device_model_name": "Widget",
+  "id": "f9233891-b2e4-5876-aa3f-16c6dfb5ff9a",
+  "is_default": true,
+  "manufacturer_name": "Acme",
+  "spec": {
+    "meta": {
+      "name": "Test device",
+      "vendor": "Acme"
+    },
+    "uplink": [
+      {
+        "id": 0,
+        "crypto": 0,
+        "payload": [
+          {
+            "name": "temperature",
+            "component": "temp16"
+          }
+        ]
+      }
+    ],
+    "typeEui": "70B3D59CD0000101",
+    "version": "1.0",
+    "component": {
+      "temp16": {
+        "func": "$/10",
+        "size": 16,
+        "type": "int",
+        "unit": "°C",
+        "littleEndian": false
+      }
+    }
+  },
+  "type_eui": "70B3D59CD0000101",
+  "version": "1.0"
+}

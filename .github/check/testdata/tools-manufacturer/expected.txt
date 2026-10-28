@@ -1,0 +1,1 @@
+tools/thing/v1.json: spec.version: "1.0" does not equal version "1"

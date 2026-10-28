@@ -1,0 +1,1 @@
+acme/widget/v1.0.json: spec: rejected by the KiloCenter decoder: Blueprint JSON is invalid or malformed: json: cannot unmarshal string into Go struct field Spec.uplink of type []blueprint.PayloadFormat

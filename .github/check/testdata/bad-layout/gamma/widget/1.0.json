@@ -1,0 +1,39 @@
+{
+  "device_model_code": "widget",
+  "device_model_id": "c3337bc7-e1d4-54b1-bf4c-22670f561460",
+  "device_model_name": "Widget",
+  "id": "371d3cac-caee-5828-9848-3c70f4ea3261",
+  "is_default": true,
+  "manufacturer_name": "Gamma",
+  "spec": {
+    "meta": {
+      "name": "Test device",
+      "vendor": "Acme"
+    },
+    "uplink": [
+      {
+        "id": 0,
+        "crypto": 0,
+        "payload": [
+          {
+            "name": "temperature",
+            "component": "temp16"
+          }
+        ]
+      }
+    ],
+    "typeEui": "70B3D59CD0000103",
+    "version": "1.0",
+    "component": {
+      "temp16": {
+        "func": "$/10",
+        "size": 16,
+        "type": "int",
+        "unit": "°C",
+        "littleEndian": false
+      }
+    }
+  },
+  "type_eui": "70B3D59CD0000103",
+  "version": "1.0"
+}

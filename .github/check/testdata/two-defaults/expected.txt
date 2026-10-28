@@ -1,0 +1,2 @@
+acme/nodefault: is_default: 0 default versions, want exactly one
+acme/widget: is_default: 2 default versions, want exactly one

@@ -1,0 +1,1 @@
+acme/widget: type_eui: versions have different Type EUIs: 70B3D59CD0000101, 70B3D59CD0000102

@@ -1,0 +1,3 @@
+Acme/widget/v1.0.json: path: directory "Acme" must be named "acme"
+beta/widget_2/v1.0.json: path: directory "widget_2" must be named "widget2"
+gamma/widget/1.0.json: path: file name must be "v1.0.json" for version "1.0"

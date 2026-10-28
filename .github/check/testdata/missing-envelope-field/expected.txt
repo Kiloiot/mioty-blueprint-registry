@@ -1,0 +1,2 @@
+acme/widget/v1.0.json: device_model_code: required
+acme/widget/v1.0.json: manufacturer_name: required
